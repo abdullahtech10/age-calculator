@@ -1,3 +1,33 @@
+const timeline = gsap.timeline()
+timeline.from('.container',{
+    y:'-100%',
+    duration:3, 
+    ease: 'bounce'
+})
+.from('.stag' ,{
+    opacity: 0,
+    duration:2,
+    stagger: 0.5,  
+})
+.from('.sub-btn', {
+    opacity:0,
+    scale: 0,
+    rotation: 360,})
+.from('.stag2',{
+    opacity: 0,
+    duration: 2,
+    stagger: 0.5,
+    ease: 'ease'
+})
+.from('.reset-btn', {
+    x: '-100%',
+    opacity: 0,
+    ease:'power-in-out',
+    duration:3
+})
+
+
+
 const form = document.querySelector('.age-form')
 
 form.addEventListener('submit', (e) => {
